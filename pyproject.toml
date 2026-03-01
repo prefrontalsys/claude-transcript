@@ -1,0 +1,17 @@
+[project]
+name = "claude-transcript"
+version = "1.1.0"
+description = "Convert Claude Code JSONL sessions to readable markdown transcripts"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+
+[project.scripts]
+claude-transcript = "claude_transcript.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/claude_transcript"]
